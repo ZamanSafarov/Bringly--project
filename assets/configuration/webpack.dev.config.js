@@ -3,6 +3,7 @@ const { merge } = require('webpack-merge');
 
 const webpackConfiguration = require('../webpack.config');
 const environment = require('./environment');
+const path = require('path');
 
 module.exports = merge(webpackConfiguration, {
     mode: 'development',
@@ -12,14 +13,15 @@ module.exports = merge(webpackConfiguration, {
 
     /* Development Server Configuration */
     devServer: {
-        contentBase: environment.paths.output,
+        contentBase: environment.paths.serveFrom,
+        disableHostCheck: false,
         watchContentBase: true,
-        publicPath: '/',
-        open: true,
+        publicPath: '/assets',
+        open: false,
         historyApiFallback: true,
         compress: true,
         overlay: true,
-        hot: false,
+        hot: true,
         watchOptions: {
             poll: 300,
         },

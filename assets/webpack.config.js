@@ -11,7 +11,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { extendDefaultPlugins } = require('svgo');
 const WebpackShellPluginNext = require('webpack-shell-plugin-next');
-const FontFaceGenerator = require('./configuration/font-face-generator')
+const FontFaceGenerator = require('./configuration/font-face-generator');
+const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
+
 
 
 
@@ -40,7 +42,28 @@ module.exports = {
         rules: [
             {
                 test: /\.less$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader'],
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: (loader) => {
+                                return {
+                                    plugins: [
+                                        new IconfontWebpackPlugin({
+                                            resolve: loader.resolve,
+                                            fontNamePrefix: 'icon-',
+                                            enforcedSvgHeight: 3000,
+                                        })
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    // 'postcss-loader',
+                    'less-loader'
+                ],
             },
             {
                 test: /\.js$/,
@@ -93,11 +116,6 @@ module.exports = {
                 blocking: true,
                 parallel: false
             },
-            // onBuildEnd:{
-            //     scripts: ['echo "Glue sprites end"'],
-            //     blocking: false,
-            //     parallel: true
-            // }
         }),
         new MiniCssExtractPlugin({
             filename: 'css/design.css',
@@ -141,6 +159,7 @@ module.exports = {
                 },
             ],
         }),
+
     ].concat(htmlPluginEntries),
     target: 'web',
 };

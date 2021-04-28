@@ -64,7 +64,6 @@ class FontFaceGenerator{
         })
 
         grunt.file.write(self.options.outputFile,self.contents)
-        // console.log("My First webpack plugin");
     }
 
 }

@@ -7,10 +7,13 @@ module.exports = {
 
         /* Path to built files directory */
         output: path.resolve(__dirname, '../../wwwroot/assets'),
+
+        /* Path to serve files directory */
+        serveFrom: path.resolve(__dirname, '../../wwwroot'),
     },
     server: {
         host: 'localhost',
-        port: 8000,
+        port: 9000,
     },
     limits: {
         /* Image files size in bytes. Below this value the image file will be served as DataURL (inline base64). */
