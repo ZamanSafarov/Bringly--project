@@ -13,9 +13,9 @@ class kssGenerator{
                 environment.paths.serveFrom+'/assets/css/design.css',
             ],
             js: [
-                environment.paths.source+'/javascripts/used/*'
+                environment.paths.serveFrom+'/assets/js/design.js',
             ],
-            homepage: 'homepage.md',
+            homepage: environment.paths.serveFrom+'/homepage.md',
             title: environment.app.name
         }
 
