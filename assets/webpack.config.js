@@ -11,8 +11,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { extendDefaultPlugins } = require('svgo');
 const WebpackShellPluginNext = require('webpack-shell-plugin-next');
-const FontFaceGenerator = require('./configuration/font-face-generator');
+const FontFaceGenerator = require('./webpack-plugins/font-face-generator');
 const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
+const kssGenerator = require('./webpack-plugins/kss-generator')
 
 
 
@@ -101,13 +102,23 @@ module.exports = {
     plugins: [
         new FontFaceGenerator({
             fontDir: './fonts',
-            outputFile: './css/utilities/f.less',
-            template:  '@include font-face("' +
-                '{{font}}", font-files(' +
-                '"{{font}}.woff", ' +
-                '"{{font}}.ttf", ' +
-                '"{{font}}.svg#{{font}}"), ' +
-                '"{{font}}.eot");',
+            outputFile: './css/utilities/fonts.less',
+            // template:  '@include font-face("' +
+            //     '{{font}}", font-files(' +
+            //     '"{{font}}.woff", ' +
+            //     '"{{font}}.ttf", ' +
+            //     '"{{font}}.svg#{{font}}"), ' +
+            //     '"{{font}}.eot");',
+            template: '@font-face{ font-family: "' +
+                '{{font}}"; ' +
+                'src: url("../../fonts/{{font}}.eot");' +
+                // 'src: url("../../fonts/{{font}}.eot") format(\'embedded-opentype\')' +
+                // ',url("../../fonts/{{font}}.woff2") format(\'woff2\')' +
+                // ',url("../../fonts/{{font}}.woff") format(\'woff\')' +
+                // ',url("../../fonts/{{font}}.ttf") format(\'truetype\')' +
+                // ',url("../../fonts/{{font}}.svg") format(\'svg\')' +
+                ';' +
+                '}',
             removeFromFile: '-webfont'
         }),
         new WebpackShellPluginNext({
@@ -159,6 +170,7 @@ module.exports = {
                 },
             ],
         }),
+        new kssGenerator(),
 
     ].concat(htmlPluginEntries),
     target: 'web',
