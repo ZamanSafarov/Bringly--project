@@ -162,37 +162,37 @@
   height: auto;
 }
 
-//.pico{
-//	background-image: url('/assets/images/pico.png?v=6');
-//	background-repeat: no-repeat;
-//	background-size: @sprite-width @sprite-height;
-//	  @media
-//	  only screen and (-webkit-min-device-pixel-ratio: 2),
-//	  only screen and (   min--moz-device-pixel-ratio: 2),
-//	  only screen and (     -o-min-device-pixel-ratio: 2/1),
-//	  only screen and (        min-device-pixel-ratio: 2),
-//	  only screen and (                min-resolution: 192dpi),
-//	  only screen and (                min-resolution: 2dppx) {
-//			background-image: url('/assets/images/pico@2x.png?v=6');
-//	  }
-//
-//}
-//.sprite(@sprite){
-//	background-position: ~"@{@{sprite}-x}" ~"@{@{sprite}-y}";
-//	width: ~"@{@{sprite}-width}";
-//	height: ~"@{@{sprite}-height}";
-//
-//	  @media
-//	  only screen and (-webkit-min-device-pixel-ratio: 2),
-//	  only screen and (   min--moz-device-pixel-ratio: 2),
-//	  only screen and (     -o-min-device-pixel-ratio: 2/1),
-//	  only screen and (        min-device-pixel-ratio: 2),
-//	  only screen and (                min-resolution: 192dpi),
-//	  only screen and (                min-resolution: 2dppx) {
-//		//background-position: ~"@{@{sprite}-2x}" ~"@{@{sprite}-2y}";
-//    	}
-//
-//}
+.pico{
+	background-image: url('../../images/content/pico.png?v=6');
+	background-repeat: no-repeat;
+	background-size: @sprite-width @sprite-height;
+	  @media
+	  only screen and (-webkit-min-device-pixel-ratio: 2),
+	  only screen and (   min--moz-device-pixel-ratio: 2),
+	  only screen and (     -o-min-device-pixel-ratio: 2/1),
+	  only screen and (        min-device-pixel-ratio: 2),
+	  only screen and (                min-resolution: 192dpi),
+	  only screen and (                min-resolution: 2dppx) {
+			background-image: url('../../images/content/pico@2x.png');
+	  }
+
+}
+.sprite(@sprite){
+	background-position: ~"@{@{sprite}-x}" ~"@{@{sprite}-y}";
+	width: ~"@{@{sprite}-width}";
+	height: ~"@{@{sprite}-height}";
+
+	  @media
+	  only screen and (-webkit-min-device-pixel-ratio: 2),
+	  only screen and (   min--moz-device-pixel-ratio: 2),
+	  only screen and (     -o-min-device-pixel-ratio: 2/1),
+	  only screen and (        min-device-pixel-ratio: 2),
+	  only screen and (                min-resolution: 192dpi),
+	  only screen and (                min-resolution: 2dppx) {
+		//background-position: ~"@{@{sprite}-2x}" ~"@{@{sprite}-2y}";
+    	}
+
+}
 
 
 /// arrow
