@@ -21,6 +21,7 @@ Before to start development you need to do things below
 
 ### Font Face Generator Plugin
 Available options to make changes
+
 |Name|Type|Default|Description|
 |:--:|:--:|:-----:|:----------|
 |**`fontDir`**|`{String}`|`./fonts`|Required - to read files from directory|
