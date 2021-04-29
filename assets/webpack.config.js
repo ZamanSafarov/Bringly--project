@@ -14,8 +14,12 @@ const WebpackShellPluginNext = require('webpack-shell-plugin-next');
 const FontFaceGenerator = require('./webpack-plugins/font-face-generator');
 const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
 const kssGenerator = require('./webpack-plugins/kss-generator')
+//const envMode = require('./webpack-plugins/get-env-mod')
 
 
+// if (envMode){
+//     console.log = function () {};
+// }
 
 
 const environment = require('./configuration/environment');
@@ -123,7 +127,7 @@ module.exports = {
         }),
         new WebpackShellPluginNext({
             onBuildStart:{
-                scripts: ['glue ./images/pico/ ./images/content --margin=10 --less=./css/utilities/ --less-template=./images/sprites/template.jinja --retina --namespace= --sprite-namespace= -f'],
+                scripts: ['glue ./images/pico/ ./images/content --margin=10 --less=./css/utilities/ --less-template=./images/sprites/template.jinja --retina --namespace= --sprite-namespace= -f –quiet'],
                 blocking: true,
                 parallel: false
             },

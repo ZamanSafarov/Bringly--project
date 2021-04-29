@@ -15,7 +15,7 @@
     "prod": "webpack --config configuration/webpack.prod.config.js --mode=production",
     "lint:sass": "sass-lint -v -q",
     "lint:js": "eslint --ext .js src/js/",
-    "stats": "webpack --config configuration/webpack.prod.config.js --mode=production --json > ../wwwroot/stats.json && webpack-bundle-analyzer ../wwwroot/stats.json"
+    "stats": "webpack --config configuration/webpack.prod.config.js --node-env=ENABLE_STAT --mode=production --json > ../wwwroot/stats.json && webpack-bundle-analyzer ../wwwroot/stats.json"
   },
   "keywords": [],
   "author": "",
