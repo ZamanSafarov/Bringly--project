@@ -1,0 +1,45 @@
+.cleanProces{
+  background-color: @section-clean-color;
+  padding-top: 30px;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__head{
+    text-align: center;
+    .fonts-native(48px,700,@archivo-medium);
+    line-height: 52px;
+    color: @white;
+    padding-top: 30px;
+    padding-bottom: -30px;
+  }
+  &__item{
+    position: relative;
+    width: ~"calc(25% - 15px)";
+    //height: 515px;
+    //display: flex;
+    //align-items: flex-end;
+    //justify-content: center;
+    &--img{
+      width: 100%;
+      height: 470px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+    p{
+      max-width: 80%;
+      .fonts-native(14px,500,@archivo-regular);
+      line-height: 16px;
+      color: @white;
+      text-align: center;
+      min-height: 45px;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

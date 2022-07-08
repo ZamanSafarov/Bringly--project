@@ -43,6 +43,11 @@ module.exports = {
         filename: 'js/design.js',
         path: environment.paths.output,
     },
+    externals: {
+        // require("jquery") is external and available
+        //  on the global var jQuery
+        "jquery": "jQuery"
+    },
     module: {
         rules: [
             {
@@ -115,7 +120,7 @@ module.exports = {
             //     '"{{font}}.eot");',
             template: '@font-face{ font-family: "' +
                 '{{font}}"; ' +
-                'src: url("../../fonts/{{font}}.eot");' +
+                'src: url("../../fonts/{{font}}.ttf");' +
                 // 'src: url("../../fonts/{{font}}.eot") format(\'embedded-opentype\')' +
                 // ',url("../../fonts/{{font}}.woff2") format(\'woff2\')' +
                 // ',url("../../fonts/{{font}}.woff") format(\'woff\')' +

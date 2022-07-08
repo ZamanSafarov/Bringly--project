@@ -1,31 +1,33 @@
-@black: #303030;
+@black: #2D2E31;
+@blackTxt: #333744;
+@blueTxt: #1E65E4;
 @white: #fff;
-@color-blue: #1e6ffb;
+@color-blue: #449EF5;
 @color-blue5: rgba(30, 111, 251, .5);
 @color-gray: #e8e9ea;
 @body-color: #F7F8FB;
+@section-clean-color: #2066E4;
 @link-color: #394457;
 @link-color5: rgba(57, 68, 87, 0.5);
 @link-color35: rgba(57, 68, 87, .35);
 @sfont :'kaushan';
-@sfontB :'verdanaBold';
-@pfont:'Inter-Regular';
-@pmedium: 'Inter-Medium';
-@regular: 'roboto-regular';
-@light: 'roboto-light';
-@bold: 'roboto-bold';
+@archivo-regular: 'Archivo-Regular';
+@archivo-medium: 'Archivo-Medium';
+@archivo-semiBold: 'Archivo-SemiBold';
+@archivo-bold: 'Archivo-Bold';
+@archivo-italic: 'Archivo-Italic';
+@archivo-light: 'Archivo-Light';
 
 
-.fonts-native(@size: 14px, @weight: normal,@font:@pfont){
+.fonts-native(@size: 14px, @weight: normal,@font:@archivo-regular){
 	line-height: @size;
-	font-family: @font, 'Arial';
+	font-family: @font;
 	font-weight: @weight;
 	font-size: @size;
 }
 
 .container {
   .container-fixed();
-
   @media (min-width: @screen-sm-min) {
     width: @container-sm;
   }

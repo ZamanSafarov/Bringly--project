@@ -1,0 +1,38 @@
+.banner{
+  width: 100%;
+  padding-bottom: 100px;
+  position: relative;
+  background: linear-gradient(124.08deg, #6B80E4 4.84%, #1E65E4 87.11%);
+  &__headTxt{
+    width: 51%;
+    padding-top: 65px;
+  }
+  &__left{
+    position: absolute;
+    top: 48px;
+    right: 0;
+    width: 26%;
+    @media(max-width: 1550px){
+      width: 32%;
+    }
+  }
+  &__hashtagTxt{
+    .fonts-native(30px,300,@archivo-regular);
+    line-height: 32px;
+    margin-top: 28px;
+    color: @white;
+    span{
+      font-weight: 700;
+    }
+  }
+  &__play{
+    width: 58px;
+    margin-top: 48px;
+  }
+}
+.bannerPartnyors{
+  margin: 35px 0 100px 0;
+  &__img{
+    max-width: 750px;
+  }
+}
