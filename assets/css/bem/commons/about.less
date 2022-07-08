@@ -1,16 +1,29 @@
 .about{
   margin-bottom: 100px;
+  @media(max-width: 1024px){
+    margin-bottom: 42px;
+  }
   &__wrapper{
     display: flex;
     justify-content: space-between;
+    @media(max-width: 1024px){
+      flex-direction: column;
+    }
   }
   &__left{
     width: ~"calc(50% - 20px)";
+    @media(max-width: 1024px){
+      width: 100%;
+    }
     &--head{
       .fonts-native(54px,700,@archivo-medium);
       line-height: 58px;
       color: @blackTxt;
       margin-bottom: 25px;
+      @media(max-width: 1024px){
+        font-size: 30px;
+        line-height: 32px;
+      }
     }
     &--hashtags{
       margin-bottom: 5px;
@@ -31,6 +44,10 @@
   }
   &__right{
     width: ~"calc(50% - 20px)";
+    @media(max-width: 1024px){
+      width: 100%;
+      margin-top: 16px;
+    }
     position: relative;
     img{
       border-radius: 12px;

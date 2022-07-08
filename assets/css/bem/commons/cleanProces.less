@@ -1,9 +1,16 @@
 .cleanProces{
   background-color: @section-clean-color;
   padding-top: 30px;
+  @media(max-width: 1024px){
+    padding-bottom: 40px;
+  }
   &__wrapper{
     display: flex;
     justify-content: space-between;
+    @media(max-width: 1024px){
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
   }
   &__head{
     text-align: center;
@@ -16,6 +23,13 @@
   &__item{
     position: relative;
     width: ~"calc(25% - 15px)";
+    @media(max-width: 1024px){
+      width: 50%;
+      padding-bottom: 40px;
+    }
+    @media(max-width: 767px){
+      width: 100%;
+    }
     //height: 515px;
     //display: flex;
     //align-items: flex-end;
@@ -40,6 +54,13 @@
       bottom: 0px;
       left: 50%;
       transform: translateX(-50%);
+      @media(max-width: 1024px){
+        font-size: 18px;
+        bottom: -20px;
+        max-width: 100%;
+        left: 0;
+        transform: translateX(0);
+      }
     }
   }
 }

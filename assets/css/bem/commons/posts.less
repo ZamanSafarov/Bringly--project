@@ -8,6 +8,10 @@
     color: @white;
     margin-bottom: 26px;
     text-align: center;
+    @media(max-width: 767px){
+      font-size: 30px;
+      line-height: 32px;
+    }
   }
   p{
     .fonts-native(18px,300,@archivo-light);
@@ -16,6 +20,11 @@
     max-width: 50%;
     text-align: center;
     margin: 0 auto;
+    @media(max-width: 1024px){
+      max-width: 100%;
+      font-size: 16px;
+      line-height: 17px;
+    }
   }
   &__wrapper{
     padding-top: 80px;
@@ -23,11 +32,21 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: 0 -15px;
+    @media(max-width: 1024px){
+      padding-top: 30px;
+    }
     a{
       width: ~"calc(25% - 30px)";
       height: 250px;
       margin: 15px;
       transition: .3s ease-in-out;
+      @media(max-width: 1024px){
+        width: ~"calc(33.33% - 30px)";
+      }
+      @media(max-width: 767px){
+        width: ~"calc(50% - 30px)";
+        height: 170px;
+      }
       &:hover{
         transform: scale(1.1);
       }

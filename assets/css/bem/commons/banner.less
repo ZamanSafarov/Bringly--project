@@ -6,6 +6,9 @@
   &__headTxt{
     width: 51%;
     padding-top: 65px;
+    @media(max-width: 767px){
+      width: 70%;
+    }
   }
   &__left{
     position: absolute;
@@ -14,6 +17,13 @@
     width: 26%;
     @media(max-width: 1550px){
       width: 32%;
+    }
+    @media(max-width: 1024px){
+      top: auto;
+      bottom: -30px;
+    }
+    @media(max-width: 767px){
+      width: 45%;
     }
   }
   &__hashtagTxt{
