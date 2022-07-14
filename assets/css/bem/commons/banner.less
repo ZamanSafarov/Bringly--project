@@ -2,7 +2,11 @@
   width: 100%;
   padding-bottom: 100px;
   position: relative;
+  max-height: 500px!important;
   background: linear-gradient(124.08deg, #6B80E4 4.84%, #1E65E4 87.11%);
+  .container--1230{
+    position: initial!important;
+  }
   &__headTxt{
     width: 51%;
     padding-top: 65px;
@@ -14,7 +18,8 @@
     position: absolute;
     top: 48px;
     right: 0;
-    width: 26%;
+    width: 40%;
+    z-index: 10;
     @media(max-width: 1550px){
       width: 32%;
     }
@@ -24,6 +29,9 @@
     }
     @media(max-width: 767px){
       width: 45%;
+    }
+    img{
+      position: relative;
     }
   }
   &__hashtagTxt{
@@ -35,14 +43,191 @@
       font-weight: 700;
     }
   }
+  &__pouse{
+    width: 58px;
+    pointer-events: auto;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    bottom: 100px;
+    .c {
+      position: relative;
+      transform: rotate(-90deg);
+      .center {
+        width: @r;
+        height: @r;
+        background-color: @white;
+        border-radius: 100%;
+        position: relative;
+        .round{
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+          position: relative;
+          position: absolute;
+          top: 0;
+          left: 0;
+          &:after{
+            content: '' ;
+            position: absolute;
+            top: 15px;
+            left: 13px;
+            border-radius: 2px;
+            width: 20px;
+            height: 5px;
+            background-color: @playBtn;
+          }
+          &:before{
+            content: '';
+            position: absolute;
+            top: 26px;
+            left: 13px;
+            border-radius: 2px;
+            width: 20px;
+            height: 5px;
+            background-color: @playBtn;
+          }
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+          background-color: @white;
+          animation: center @duration infinite;
+        }
+        &:before{
+          content: '';
+          width: 61px;
+          height: 61px;
+          background: transparent;
+          border-radius: 100%;
+          border: 2px solid @white;
+          position: absolute;
+          top: -7px;
+          left: -7px;
+        }
+      }
+    }
+
+    @keyframes center {
+      to {
+        transform: scale(3);
+        opacity: 0;
+      }
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg) translateX(600%) rotate(-0deg);
+      }
+      2% {
+        transform: rotate(0deg) translateX(600%) rotate(-0deg);
+      }
+      98% {
+        transform: rotate(360deg) translateX(600%) rotate(-360deg);
+      }
+      100% {
+        transform: rotate(360deg) translateX(600%) rotate(-360deg);
+      }
+    }
+  }
   &__play{
     width: 58px;
-    margin-top: 48px;
+    pointer-events: auto;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    bottom: 100px;
+    .c {
+      position: relative;
+      transform: rotate(-90deg);
+      .center {
+        width: @r;
+        height: @r;
+        background-color: @white;
+        border-radius: 100%;
+        position: relative;
+        .round{
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+          position: relative;
+          position: absolute;
+          top: 0;
+          left: 0;
+          &:after{
+            content: '';
+            position: absolute;
+            top: 17px;
+            left: 14px;
+            transform: rotate(90deg);
+            border-radius: 2px;
+            width: 16px;
+            height: 16px;
+            clip-path: polygon(100% 50%, 0 0, 0 100%);
+            background-color: @playBtn;
+          }
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+          background-color: @white;
+          animation: center @duration infinite;
+        }
+        &:before{
+          content: '';
+          width: 61px;
+          height: 61px;
+          background: transparent;
+          border-radius: 100%;
+          border: 2px solid @white;
+          position: absolute;
+          top: -7px;
+          left: -7px;
+        }
+      }
+    }
+
+    @keyframes center {
+      to {
+        transform: scale(3);
+        opacity: 0;
+      }
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg) translateX(600%) rotate(-0deg);
+      }
+      2% {
+        transform: rotate(0deg) translateX(600%) rotate(-0deg);
+      }
+      98% {
+        transform: rotate(360deg) translateX(600%) rotate(-360deg);
+      }
+      100% {
+        transform: rotate(360deg) translateX(600%) rotate(-360deg);
+      }
+    }
   }
+
 }
 .bannerPartnyors{
-  margin: 35px 0 100px 0;
+  margin: 35px 0 70px 0;
   &__img{
     max-width: 750px;
   }
+}
+#bgndVideo{
+  height: auto!important;
+  padding-bottom: 500px!important;
+  pointer-events: none;
+}
+.inlinePlayButton{
+  display: none!important;
 }

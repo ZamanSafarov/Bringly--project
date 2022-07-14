@@ -1,6 +1,28 @@
 .partnyors{
   padding-top: 75px;
   padding-bottom: 54px;
+  &__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 -15px;
+
+  }
+  &__item{
+    width: ~"calc(25% - 30px)";
+    margin: 15px;
+    @media(max-width: 767px){
+      width: ~"calc(50% - 30px)";
+    }
+    a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img{
+        max-height: 85px;
+      }
+    }
+  }
   &__slider{
     &--item{
       img{
