@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>BD</title>
     <link rel="stylesheet" href="assets/css/design.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.9/css/jquery.mb.YTPlayer.min.css">
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.9/css/jquery.mb.YTPlayer.min.css">-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 </head>
 <body>
@@ -90,30 +90,22 @@
         </div>
     </div>
 </header>
-<section class="banner" id="bgndVideo"  data-property="{videoURL:'http://youtu.be/BsekcY04xvQ',containment:'#bgndVideo',autoPlay:false,showinfo: false, mute:true, startAt:0, opacity:1,showControls: false,showAnnotations: false,inlinePlayButton:false}">
 
+<section class="banner"  >
     <div class="container--1230">
-        <div class="banner__play js--playVideo" >
-            <div class="c">
-                <div class="center">
-                    <div class="round"></div>
+        <div class="banner__w">
+            <img src="./static/banner/bannerMain01.jpeg" alt="" class="banner__poster js--hiddenInVideoPlay">
+            <div class="banner__play js--playVideo js--hiddenInVideoPlay">
+                <div class="c">
+                    <div class="center">
+                        <div class="round"></div>
+                    </div>
                 </div>
             </div>
+            <iframe class="banner__frame js--videoFrame" data-src="https://www.youtube.com/embed/CtN-qish49k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
         </div>
-        <div class="banner__pouse js--pouseVideo" >
-            <div class="c">
-                <div class="center">
-                    <div class="round"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="bannerPartnyors">
-    <div class="container--1230">
-        <div class="bannerPartnyors__img">
-            <img src="static/banner/partnyors.png" class="img-responsive" alt="">
-        </div>
+
+
     </div>
 </section>
 <section class="about" id="about">
@@ -373,5 +365,4 @@
 </footer>
 </body>
 <script src="./assets/js/design.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.9/jquery.mb.YTPlayer.min.js"></script>
 </html>

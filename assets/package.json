@@ -13,6 +13,7 @@
     "bundle": "npm install && npm run watch",
     "dev": "webpack serve --config configuration/webpack.dev.config.js --mode=development",
     "prod": "webpack --config configuration/webpack.prod.config.js --mode=production",
+    "prod-surge": "webpack --config configuration/webpack.prod.config.js --mode=production && surge ../wwwroot bd-front.surge.sh",
     "lint:sass": "sass-lint -v -q",
     "lint:js": "eslint --ext .js src/js/",
     "stats": "webpack --config configuration/webpack.prod.config.js --node-env=ENABLE_STAT --mode=production --json > ../wwwroot/stats.json && webpack-bundle-analyzer ../wwwroot/stats.json"

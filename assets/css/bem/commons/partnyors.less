@@ -18,6 +18,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      @media(max-width: 767px){
+        justify-content: flex-start;
+      }
       img{
         max-height: 85px;
       }
@@ -75,6 +78,7 @@
     margin-bottom: 54px;
     @media(max-width: 767px){
       font-size: 30px;
+      letter-spacing: -0.5px;
     }
   }
 }

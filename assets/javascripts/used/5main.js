@@ -1,31 +1,18 @@
+
 $(document).ready(function () {
-
-    $("#bgndVideo").YTPlayer();
-
-    $('.js--playVideo').on('click',function () {
-        $('#bgndVideo').YTPPlay();
-        $('.js--playVideo').css('display', 'none');
-        $('.js--pouseVideo').css('display', 'block');
-    })
-    $('.js--pouseVideo').on('click',function () {
-        $('#bgndVideo').YTPPause();
-        $('.js--pouseVideo').css('display', 'none');
-        $('.js--playVideo').css('display', 'block');
-    })
-
-
-
-
-    $('.js--openMenu').on('click',function () {
+    $('.js--openMenu').on('click', function () {
         $('.mobileMenu').addClass('open');
         $('html, body').css('overflowY', 'hidden');
 
     })
-    $('.js--closeMenu').on('click',function () {
+    $('.js--closeMenu').on('click', function () {
         $('.mobileMenu').removeClass('open');
         $('html, body').css('overflowY', 'auto');
     })
 
+    $('iframe').load(function() {
+        $('iframe').contents().find("head").append($("<style type='text/css'>  .ytp-chrome-top.ytp-show-watch-later-title.ytp-share-button-visible.ytp-show-share-title.ytp-show-cards-title { display: none !important; } </style>"));
+    });
 
     var aboutRightImdHeight = $('.about__right  > img').height();
     $('.about__right--layout').height(aboutRightImdHeight);
@@ -77,7 +64,7 @@ $(document).ready(function () {
         ]
     });
 });
-$(document).on('click', 'a[href^="#"]', function(e) {
+$(document).on('click', 'a[href^="#"]', function (e) {
     // target element id
     var id = $(this).attr('href');
 
@@ -94,5 +81,16 @@ $(document).on('click', 'a[href^="#"]', function(e) {
     var pos = $id.offset().top;
 
     // animated top scrolling
-    $('body, html').animate({scrollTop: pos},1000);
+    $('body, html').animate({scrollTop: pos}, 1000);
 });
+
+$('.js--playVideo').click(function () {
+    videoPlay($('.js--videoFrame'))
+})
+
+function videoPlay(wrapper) {
+    var iframe = wrapper;
+    var src = iframe.data('src');
+    $('.js--hiddenInVideoPlay').hide()
+    iframe.attr('src',src+"?autoplay=1");
+}
