@@ -1,0 +1,108 @@
+.blog {
+    overflow-y: scroll;
+    width: 100%;
+    height: 100vh;
+    background-color: @white;
+    padding: 80px 98px 24px 320px;
+
+    &__title {
+        font-size: 22px;
+        color: @title-text;
+        font-family: @Montserrat-bold;
+    }
+
+    &__tabs {
+        width: 100%;
+        .flexbox(center, space-between);
+        margin-top: 33px;
+
+        &__btn {
+            padding: 8px 30px;
+            transition: 0.2s;
+            color: @official-site-color;
+            font-size: 12px;
+            font-family: @Montserrat-medium;
+            border: none;
+            border-radius: 5px;
+            background-color: hsla(181, 49%, 53%, 7%);
+
+        }
+
+        &__btn:hover {
+            transition: 0.2s;
+            border-radius: 5px;
+            background-color: @official-site-color;
+            color: @white;
+        }
+    }
+
+    &__cards {
+        margin-top: 76px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &__container {
+            margin: 0;
+            max-width: 265px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+
+            &__img {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            &__content {
+                padding: 37px 0;
+
+                &__link {
+                    color: @official-site-color;
+                    font-size: 14px;
+                    font-family: @Montserrat-semiBold;
+                    line-height: 17px;
+                    text-decoration: none;
+                }
+
+                &__text {
+                    font-size: 13px;
+                    line-height: 22px;
+                    font-family: @Montserrat-light;
+                    color: @sidebar-color;
+                }
+            }
+        }
+    }
+
+    &__pagination {
+        margin: 70px 0;
+        display: flex;
+        align-items: center;
+
+        &__link {
+            padding: 7px;
+            transition: 0.2s;
+            background-color: @pagination-color-opp;
+            color: @sidebar-color;
+            font-family: 11px;
+        }
+        &__link:hover{
+            transition: 0.2s;
+            background-color: @pagination-color;
+                color: @white;
+        }
+
+        &__link:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        &__link:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+}

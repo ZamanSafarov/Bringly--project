@@ -1,90 +1,156 @@
-@import "commons/accordion";
-@import "commons/alert";
-@import "commons/sprite";
+@import "commons/sidebar";
 @import "commons/header";
-@import "commons/footer";
-@import "commons/container";
-@import "commons/banner";
-@import "commons/about";
-@import "commons/cleanProces";
-@import "commons/rivers";
-@import "commons/posts";
-@import "commons/partnyors";
+@import "commons/lc-waikiki";
+@import "commons/blog";
+@import "commons/popular";
+@import "commons/main";
 
-.img-responsive{
-  max-width: 100%;
+
+
+body {
+  overflow: hidden;
 }
-.facebook-icon{
-    font-size: 20px;
-    font-family: Inter-Medium;
-    &:before{
-      content: '';
-      display: inline-block;
-      font-icon: url('../../icons/facebook.svg');
-    }
+
+.wrapper {
+  display: flex;
+  position: relative;
 }
-.bars-icon{
-  font-size: 40px;
+
+.main {
+  width: 100%;
+  height: 100%;
+
+}
+.active{
+  display: block;
+}
+.disable{
+  display: none;
+}
+.slick-slide{
+  margin-right: 30px;
+}
+.rotate-180::before{
+  transform: rotate(180deg);
+}
+.rotate-270::before {
+  transform: rotate(270deg);
+}
+.line {
+  width: 35px;
+  height: 2px;
+  background-color: @line-color;
+  transform: rotate(-90deg);
+  margin: 0;
+  border: none;
+}
+
+.arrow-right-icon {
+  font-size: 8px;
   font-family: Inter-Medium;
-  &:before{
+
+  &:before {
     content: '';
     display: inline-block;
-    font-icon: url('../../icons/barmenu.svg');
+    font-icon: url('../../icons/arrow-right.svg');
   }
 }
-.exit-icon{
-  font-size: 30px;
+
+.eye-icon {
+  font-size: 12px;
   font-family: Inter-Medium;
-  &:before{
+
+  &:before {
     content: '';
     display: inline-block;
-    font-icon: url('../../icons/exitbtn.svg');
+    font-icon: url('../../icons/eye.svg');
   }
 }
-.instagram-icon{
-  font-size: 20px;
+
+.facebook-icon {
+  font-size: 18px;
   font-family: Inter-Medium;
-  &:before{
+
+  &:before {
+    content: '';
+    display: inline-block;
+    font-icon: url('../../icons/facebook.svg');
+  }
+}
+
+.instagram-icon {
+  color: @white;
+  font-size: 12px;
+  font-family: Inter-Medium;
+
+  &:before {
     content: '';
     display: inline-block;
     font-icon: url('../../icons/instagram.svg');
   }
 }
 
-.twitter-icon{
-  font-size: 20px;
+.facebook-white-icon {
+  font-size: 12px;
   font-family: Inter-Medium;
-  &:before{
+  color: @white;
+  margin-right: 5px;
+
+  &:before {
     content: '';
     display: inline-block;
-    font-icon: url('../../icons/twitter.svg');
+    font-icon: url('../../icons/facebook-white.svg');
   }
 }
-.linkedin-icon{
-  font-size: 20px;
-  font-family: Inter-Medium;
-  &:before{
+.arrow-icon {
+  font-size: 8px;
+  color: @white;
+
+  &:before {
     content: '';
     display: inline-block;
-    font-icon: url('../../icons/linkedin.svg');
+    font-icon: url('../../icons/arrow.svg');
   }
 }
-.youtube-icon{
-  font-size: 20px;
+.lcwaikiki-icon {
+  font-size: 40px;
   font-family: Inter-Medium;
-  &:before{
+  color: blue;
+
+  &:before {
     content: '';
     display: inline-block;
-    font-icon: url('../../icons/youtube.svg');
+    font-icon: url('../../icons/lcwaikiki.svg');
   }
 }
-//.playVideo-icon{
-//  font-size: 34px;
-//  font-family: Inter-Medium;
-//  &:before{
-//    content: '';
-//    display: inline-block;
-//    color: rgba(255, 255, 255, 0.8);;
-//    font-icon: url('../../icons/playVideo.svg');
-//  }
-//}
+
+.bringly-icon {
+  font-size: 30px;
+  font-family: Inter-Medium;
+  color: @white;
+  position: absolute;
+    top: 17px;
+    left: 17px;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    font-icon: url('../../icons/bringly.svg');
+  }
+}
+
+.play-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 25%;
+  left: 38%;
+  font-size: 160px;
+  font-family: Inter-Medium;
+  color: @white;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    font-icon: url('../../icons/play.svg');
+  }
+}
