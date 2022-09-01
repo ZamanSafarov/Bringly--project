@@ -1,9 +1,14 @@
 .blog {
-    overflow-y: scroll;
     width: 100%;
-    height: 100vh;
     background-color: @white;
     padding: 80px 98px 24px 320px;
+    height: 100vh;
+        overflow-y: scroll;
+
+    @media only screen and (max-width:993px) {
+        padding: 0 25px;
+        padding-top: 140px;
+    }
 
     &__title {
         font-size: 22px;
@@ -16,6 +21,12 @@
         .flexbox(center, space-between);
         margin-top: 33px;
 
+        @media only screen and (max-width:767px) {
+            justify-content: flex-start;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
         &__btn {
             padding: 8px 30px;
             transition: 0.2s;
@@ -25,6 +36,11 @@
             border: none;
             border-radius: 5px;
             background-color: hsla(181, 49%, 53%, 7%);
+
+            @media only screen and (max-width:1200px) {
+                padding: 7px 25px;
+                font-size: 10px;
+            }
 
         }
 
@@ -42,12 +58,36 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
 
+        @media only screen and (max-width:993px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        @media only screen and (max-width:767px) {
+            display: block;
+            margin-top: 50px;
+        }
+
         &__container {
             margin: 0;
-            max-width: 265px;
+            max-width: 340px;
             background: #fff;
             display: flex;
             flex-direction: column;
+
+            @media only screen and (max-width:1200px) {
+                max-width: 265px;
+            }
+
+            @media only screen and (max-width:993px) {
+                max-width: 340px;
+            }
+
+            @media only screen and (max-width:767px) {
+                max-width: 100%;
+            }
 
             &__img {
                 img {
@@ -82,6 +122,10 @@
         display: flex;
         align-items: center;
 
+        @media only screen and (max-width:767px) {
+            margin: 40px 0;
+        }
+
         &__link {
             padding: 7px;
             transition: 0.2s;
@@ -89,10 +133,11 @@
             color: @sidebar-color;
             font-family: 11px;
         }
-        &__link:hover{
+
+        &__link:hover {
             transition: 0.2s;
             background-color: @pagination-color;
-                color: @white;
+            color: @white;
         }
 
         &__link:first-child {

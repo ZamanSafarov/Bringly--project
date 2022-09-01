@@ -1,0 +1,486 @@
+.about {
+    width: 100%;
+    background-color: @white;
+    padding: 80px 0 43px 0px;
+    height: 100vh;
+    overflow-y: scroll;
+
+    @media only screen and (max-width:993px) {
+
+        padding-top: 140px;
+
+    }
+
+    &__title {
+        font-size: 22px;
+        font-family: @Montserrat-semiBold;
+        color: @about-title;
+        line-height: 25px;
+        padding-right: 190px;
+        padding-left: 320px;
+
+        @media only screen and (max-width:1200px) {
+            padding-right: 60px;
+        }
+
+        @media only screen and (max-width:993px) {
+
+            padding: 0 25px;
+
+        }
+
+        &__span {
+            color: @official-site-color;
+            font-size: 14px;
+            font-family: @Montserrat-light;
+            line-height: 16px;
+            margin-left: 30px;
+        }
+    }
+
+    &__content {
+        margin-top: 30px;
+        padding-right: 190px;
+        padding-left: 320px;
+
+        @media only screen and (max-width:1200px) {
+            padding-right: 60px;
+        }
+
+        @media only screen and (max-width:993px) {
+
+            padding: 0 25px;
+
+        }
+
+        &__text {
+            font-size: 14px;
+            font-family: @Montserrat-regular;
+            color: @about-text;
+            line-height: 21px;
+            margin-bottom: 40px;
+
+            @media only screen and (max-width:767px) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__why-bringly {
+        width: 100%;
+        padding-top: 43px;
+        margin-bottom: 53px;
+        padding-right: 190px;
+        padding-left: 320px;
+
+        @media only screen and (max-width:1200px) {
+            padding-right: 60px;
+        }
+
+        @media only screen and (max-width:993px) {
+
+            padding: 0 25px;
+
+        }
+
+
+        &__container {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            width: 100%;
+
+            @media only screen and (max-width:767px) {
+
+                display: block;
+
+            }
+
+            &__video {
+                width: 48%;
+
+                @media only screen and (max-width:767px) {
+
+                    width: 100%;
+
+                }
+
+                &__start {
+                    background-color: black;
+                    width: 100%;
+                    border-radius: 10px;
+                    height: 100%;
+                    position: relative;
+                    min-height: 350px;
+
+                    @media only screen and (max-width:1400px) {
+                        min-height: 300px;
+                    }
+
+                    &__play {
+                        left: 50%;
+                        top: 50%;
+                        position: absolute;
+                        transform: translate(-50%, -50%);
+                        cursor: pointer;
+                    }
+
+                    &__logo {
+                        left: 17px;
+                        top: 17px;
+                        position: absolute;
+
+                        @media only screen and (max-width:1400px) {
+                            width: 90px;
+                        }
+                    }
+                }
+
+                &__container {
+                    display: none;
+                    width: 100%;
+
+
+                    iframe {
+                        width: 100%;
+                        border-radius: 10px;
+                        min-height: 350px;
+
+                        @media only screen and (max-width:1400px) {
+                            min-height: 300px;
+                        }
+                    }
+                }
+
+                &__container-main {
+                    display: none;
+                    width: 100%;
+
+                    iframe {
+                        width: 100%;
+                        border-radius: 10px;
+                        min-height: 350px;
+
+                        @media only screen and (max-width:1400px) {
+                            min-height: 300px;
+                        }
+                    }
+                }
+            }
+
+            &__right {
+                width: 48%;
+                background-color: @why-bringly-about;
+                padding: 30px 37px;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+
+                @media only screen and (max-width:767px) {
+                    margin-top: 20px;
+                    width: 100%;
+
+                }
+
+                &__text {
+                    font-size: 17px;
+                    font-family: @Montserrat-medium;
+                    line-height: 20px;
+                    color: @official-site-color;
+                    margin-bottom: 15px;
+
+                    @media only screen and (max-width:767px) {
+
+                        font-size: 15px;
+
+                    }
+                }
+
+                &__paragraph {
+                    font-size: 14px;
+                    font-family: @Montserrat-medium;
+                    line-height: 21px;
+                    color: @buy-bring-title;
+
+                    @media only screen and (max-width:767px) {
+
+                        font-size: 12px;
+
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    &__service {
+        padding-bottom: 37px;
+        padding-right: 190px;
+        padding-left: 320px;
+
+        @media only screen and (max-width:1200px) {
+            padding-right: 60px;
+        }
+
+        @media only screen and (max-width:993px) {
+
+            padding: 0 25px;
+
+        }
+
+        &__title {
+            font-size: 19px;
+            line-height: 22px;
+            font-family: @Montserrat-medium;
+            color: @about-text;
+            margin-bottom: 25px;
+
+            @media only screen and (max-width:767px) {
+                font-size: 17px;
+            }
+        }
+
+        &__text {
+            font-size: 13px;
+            line-height: 22px;
+            font-family: @Montserrat-regular;
+            color: @about-text;
+            margin-bottom: 30px;
+
+            @media only screen and (max-width:767px) {
+                font-size: 12px;
+            }
+
+            span {
+                display: inline-block;
+                padding: 4px;
+                border-radius: 50%;
+                margin-right: 10px;
+                background-color: @menu-red;
+
+                @media only screen and (max-width:767px) {
+                    padding: 3px;
+                }
+            }
+        }
+    }
+
+    &__sign {
+        padding-top: 60px;
+        padding-right: 190px;
+        padding-left: 320px;
+        background-color: @why-bringly-about;
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+
+        @media only screen and (max-width:993px) {
+
+            padding: 0 25px;
+
+        }
+
+        @media only screen and (max-width:767px) {
+
+            display: block;
+
+        }
+
+        &__left {
+            width: 48%;
+            padding-top: 40px;
+
+            @media only screen and (max-width:1200px) {
+                width: 70%;
+            }
+
+            @media only screen and (max-width:767px) {
+
+                width: 100%;
+
+            }
+
+            &__title {
+                font-size: 24px;
+                font-family: @Montserrat-light;
+                color: @about-text;
+                line-height: 31px;
+                margin-bottom: 27px;
+
+                @media only screen and (max-width:767px) {
+
+                    font-size: 20px
+                }
+            }
+
+            &__text {
+                font-size: 14px;
+                font-family: @Montserrat-regular;
+                color: @about-text;
+                line-height: 21px;
+                margin-bottom: 40px;
+
+                @media only screen and (max-width:767px) {
+
+                    font-size: 12px;
+
+                }
+
+            }
+
+            &__bottom {
+                display: flex;
+
+                &__btn {
+                    @media only screen and (max-width:993px) {
+                        margin-top: 25px;
+
+                    }
+
+                    &__link {
+                        color: @white;
+                        padding: 14px 16px;
+                        text-decoration: none;
+                        background-color: @official-site-color;
+                        border-radius: 8px;
+                        font-size: 13px;
+                        font-family: @Montserrat-semiBold;
+                        line-height: 16px;
+                        border: 1px solid transparent;
+                        transition: .3s ease-in-out;
+
+                        @media only screen and (max-width:1200px) {
+                            padding: 10px 12px;
+                        }
+
+                        @media only screen and (max-width:993px) {
+
+                            padding: 14px 16px;
+                        }
+
+                        &:hover {
+                            color: @official-site-color;
+                            border: 1px solid @official-site-color;
+                            background-color: transparent;
+                        }
+
+
+                    }
+                }
+
+
+                &__line {
+                    margin-left: 5px;
+                    width: 170px;
+                    height: 140px;
+
+                    @media only screen and (max-width:1200px) {
+                        width: 175px;
+                        height: 150px;
+
+                    }
+
+                    @media only screen and (max-width:993px) {
+                        width: 190px;
+                        height: 180px;
+                    }
+
+                    @media only screen and (max-width:767px) {
+                        width: 80px;
+                        height: 100px;
+                    }
+
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+
+
+        }
+
+        &__right {
+            width: 48%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+            @media only screen and (max-width:1200px) {
+                width: 10%;
+            }
+
+            @media only screen and (max-width:993px) {
+                width: 50%;
+            }
+
+            @media only screen and (max-width:767px) {
+
+                display: none;
+
+            }
+
+            img {
+                width: 478px;
+                height: 350px;
+
+                @media only screen and (max-width:1200px) {
+                    width: 420px;
+                }
+
+                @media only screen and (max-width:993px) {
+                    width: 400px;
+                }
+            }
+        }
+    }
+
+    &__contact {
+        margin-top: 50px;
+        padding-right: 46px;
+        padding-left: 320px;
+        width: 100%;
+
+        @media only screen and (max-width:993px) {
+
+            padding: 0 25px;
+
+        }
+
+        @media only screen and (max-width:993px) {
+
+            padding: 0 5px;
+
+        }
+
+        &__container {
+            padding: 22px 33px;
+            border-radius: 12px;
+            border: 1px dashed @menu-red;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media only screen and (max-width:993px) {
+
+                padding: 18px 6px;
+
+            }
+
+            &__text {
+                font-size: 12px;
+                line-height: 23px;
+                font-family: @Montserrat-regular;
+                color: @sidebar-color;
+
+                @media only screen and (max-width:767px) {
+
+                    font-size: 10px;
+
+                }
+            }
+        }
+    }
+}
