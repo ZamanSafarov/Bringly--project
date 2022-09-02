@@ -11,6 +11,26 @@ $(document).ready(function () {
     $('.js--hamburger-menu').click(() => {
         $('.js--mobile-menu').toggleClass('seem')
     })
+    $('.js--tr-az').click(() => {
+        if ($('.js--tr-other').hasClass('tariff-red')) {
+            $('.js--tr-other').removeClass('tariff-red')
+            $('.js--tr-other').addClass('tariff-normal')
+        }
+        if ($('.js--tr-az').hasClass('tariff-normal')) {
+            $('.js--tr-az').removeClass('tariff-normal')
+        }
+        $('.js--tr-az').addClass('tariff-red')
+    })
+    $('.js--tr-other').click(() => {
+        if ($('.js--tr-az').hasClass('tariff-red')) {
+            $('.js--tr-az').removeClass('tariff-red')
+            $('.js--tr-az').addClass('tariff-normal')
+        }
+        if ($('.js--tr-other').hasClass('tariff-normal')) {
+            $('.js--tr-other').removeClass('tariff-normal')
+        }
+        $('.js--tr-other').addClass('tariff-red')
+    })
     
     $('.js--question').click((e) => {
         $(e.target).siblings('.js--answer').toggleClass('active')
@@ -55,6 +75,39 @@ $(document).ready(function () {
         ]
         
     });
+    $('.js--carousel-sales').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: $('.prev-sales'),
+        nextArrow: $('.next-sales'),
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 993,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
+
+    });
+    
 
 
     var McButton = $("[data=hamburger-menu]");

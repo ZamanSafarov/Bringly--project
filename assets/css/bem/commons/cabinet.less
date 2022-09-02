@@ -1,0 +1,386 @@
+.cabinet {
+    width: 100%;
+    background-color: @white;
+    height: 100vh;
+    overflow-y: scroll;
+
+    @media only screen and (max-width:993px) {
+        padding-top: 115px;
+    }
+
+    &__account {
+        background-color: @account-background-color;
+        width: 100%;
+        padding: 66px 120px 30px 320px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media only screen and (max-width:993px) {
+            padding: 30px 25px;
+        }
+
+        @media only screen and (max-width:767px) {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        &__name {
+            color: @sales-news-title;
+            font-size: 15px;
+            line-height: 10px;
+            font-family: @Montserrat-medium;
+
+            @media only screen and (max-width:1200px) {
+                font-size: 13px;
+            }
+        }
+
+        &__id {
+            font-size: 14px;
+            line-height: 10px;
+            font-family: @Montserrat-regular;
+            color: @id-color;
+
+            @media only screen and (max-width:1200px) {
+                font-size: 12px;
+            }
+
+            @media only screen and (max-width:767px) {
+                font-size: 12px;
+            }
+        }
+
+        &__buttons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            &__link {
+                text-decoration: none;
+                font-size: 12px;
+                line-height: 14px;
+                font-family: @Montserrat-bold;
+                padding: 7px 24px;
+                color: @white;
+                border: 1px solid transparent;
+                transition: .3s ease-in-out;
+
+
+                @media only screen and (max-width:767px) {
+                    padding: 5px 20px;
+                    font-size: 10px;
+                }
+
+                @media only screen and (max-width:767px) {
+                    padding: 5px 7px;
+                    font-size: 9px;
+                }
+
+                &:first-child {
+                    background-color: @menu-red;
+
+                    &:hover {
+                        border: 1px solid @menu-red;
+                        background-color: @white;
+                        color: @menu-red;
+                    }
+                }
+            }
+
+            &__link:first-child+&__link {
+                background-color: @sidebar-color;
+
+                &:hover {
+                    border: 1px solid @sidebar-color;
+                    background-color: @white;
+                    color: @sidebar-color;
+                }
+            }
+
+            &__link:first-child+&__link+&__link {
+                border-color: @header-border-color;
+                background-color: @account-background-color;
+                color: @sidebar-color;
+
+                &:hover {
+                    border: 1px solid @sidebar-color;
+                    background-color: @white;
+
+                }
+            }
+
+        }
+    }
+
+    &__balance {
+        width: 100%;
+        padding: 40px 120px 30px 320px;
+
+        @media only screen and (max-width:993px) {
+            padding: 0 25px;
+            padding-top: 40px;
+        }
+
+        @media only screen and (max-width:767px) {
+            padding-top: 20px;
+        }
+
+        &__up {
+            display: flex;
+            gap: 25px;
+
+            @media only screen and (max-width:767px) {
+                flex-direction: column;
+            }
+
+            &__card {
+                background-image: url("../../../../wwwroot/static/balance-background/Group\ 73.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: right;
+                padding: 23px 25px;
+                height: 300px;
+                min-width: 50%;
+                border-radius: 15px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+
+                @media only screen and (max-width:1400px) {
+                    height: 250px;
+                    width: 50%;
+                }
+
+                @media only screen and (max-width:767px) {
+                    width: 100%;
+                }
+
+                &__title {
+                    font-size: 19px;
+                    line-height: 19px;
+                    font-family: @Montserrat-medium;
+                    color: @white;
+                    letter-spacing: 2px;
+                    margin-bottom: 16px;
+
+                    @media only screen and (max-width:1400px) {
+                        font-size: 16px;
+                        line-height: 16px;
+                    }
+
+                }
+
+                &__text {
+                    font-size: 14px;
+                    line-height: 19px;
+                    font-family: @Montserrat-light;
+                    color: @white;
+
+                    @media only screen and (max-width:1400px) {
+                        font-size: 11px;
+                    }
+                }
+
+                &__currency {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    justify-content: space-between;
+
+                    &__container {
+                        color: @white;
+
+                        &__type {
+
+                            font-size: 12px;
+                            line-height: 14px;
+                            font-family: @Montserrat-regular;
+                            background-color: @official-site-color;
+                            padding: 3px 5px;
+
+                            @media only screen and (max-width:1200px) {
+                                font-size: 9px;
+                            }
+                        }
+
+                        &__amount {
+                            margin-top: 2px;
+                            font-size: 17px;
+                            line-height: 14px;
+                            font-family: @Montserrat-regular;
+                            background-color: @sales-news-title;
+                            padding: 6px 10px;
+
+                            @media only screen and (max-width:1400px) {
+                                font-size: 14px;
+                            }
+
+                            @media only screen and (max-width:1200px) {
+                                font-size: 13px;
+                                padding: 4px 6px;
+                            }
+
+                            span {
+                                margin-left: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__help {
+                width: 58%;
+
+                @media only screen and (max-width:1400px) {
+
+                    width: 40%;
+                }
+
+                @media only screen and (max-width:767px) {
+                    width: 100%;
+                }
+
+                &__text {
+                    color: @sidebar-color;
+                    font-size: 17px;
+                    line-height: 20px;
+                    font-family: @Montserrat-semiBold;
+                    margin-bottom: 15px;
+
+                    @media only screen and (max-width:1200px) {
+                        font-size: 15px;
+                    }
+                }
+
+                &__video {
+                    width: 36%;
+                    margin-bottom: 24px;
+
+                    @media only screen and (max-width:1400px) {
+
+                        width: 60%;
+                    }
+
+                    @media only screen and (max-width:767px) {
+                        width: 100%;
+
+                    }
+
+                    &__start {
+                        background-color: black;
+                        width: 100%;
+                        border-radius: 10px;
+                        height: 100%;
+                        position: relative;
+                        height: 180px;
+
+                        @media only screen and (max-width:1400px) {
+                            height: 140px;
+                        }
+
+                        @media only screen and (max-width:767px) {
+                            height: 180px;
+                        }
+
+                        &__play {
+                            left: 50%;
+                            top: 50%;
+                            width: 50px;
+                            height: 50px;
+                            position: absolute;
+                            transform: translate(-50%, -50%);
+                            cursor: pointer;
+
+                            @media only screen and (max-width:1400px) {
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+
+                        &__logo {
+                            left: 17px;
+                            top: 17px;
+                            position: absolute;
+                            width: 90px;
+                            height: 25px;
+
+                            @media only screen and (max-width:1400px) {
+                                width: 60px;
+                                height: 20px;
+                            }
+                        }
+                    }
+
+                    &__container {
+                        display: none;
+                        width: 100%;
+                        height: 180px;
+
+                        @media only screen and (max-width:1400px) {
+                            min-height: 140px;
+                        }
+
+                        @media only screen and (max-width:767px) {
+                            height: 180px;
+                        }
+
+                        iframe {
+                            width: 100%;
+                            border-radius: 10px;
+                            height: 100% !important;
+                        }
+                    }
+                }
+
+                &__other-shops {
+                    display: flex;
+                    align-items: center;
+
+                    &__link {
+                        font-size: 16px;
+                        line-height: 14px;
+                        font-family: @Montserrat-medium;
+                        color: @sidebar-color;
+                        text-decoration: none;
+                        margin-left: 7px;
+
+                        @media only screen and (max-width:1200px) {
+                            font-size: 13px;
+                        }
+
+                        @media only screen and (max-width:767px) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__down {
+            padding: 56px 0 52px;
+            display: flex;
+            align-items: center;
+            gap: 70px;
+
+            @media only screen and (max-width:767px) {
+                padding: 40px 0 40px;
+            }
+
+            &__text {
+                font-size: 16px;
+                line-height: 20px;
+                font-family: @Montserrat-medium;
+                color: @sidebar-color;
+
+                @media only screen and (max-width:1200px) {
+                    font-size: 13px;
+                }
+
+                &:hover {
+                    color: @menu-red;
+                }
+            }
+        }
+    }
+}

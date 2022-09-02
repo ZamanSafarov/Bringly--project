@@ -128,7 +128,7 @@
             margin-bottom: 50px;
 
             @media only screen and (max-width:767px) {
-                font-size: 10px;
+                font-size: 12px;
                 margin-bottom: 20px;
             }
         }
@@ -137,16 +137,24 @@
             width: 100%;
 
             &__country {
-                font-size: 14px;
+                cursor: pointer;
+                font-size: 15px;
                 font-family: @Montserrat-regular;
-                color: @menu-red;
+                color: @grey;
                 padding-bottom: 4px;
-                border-bottom: 1px solid @menu-red;
-
+                border-bottom: 1px solid @grey;
+                &:hover{
+                    color: @menu-red;
+                    border-color: @menu-red;
+                }
+                
                 @media only screen and (max-width:767px) {
-                    font-size: 10px;
+                    font-size: 14px;
 
                 }
+            }
+            &__country:first-child+&__country {
+               margin-left: 10px;
             }
 
             &__container {
@@ -193,7 +201,7 @@
                             }
 
                             @media only screen and (max-width:767px) {
-                                padding: 6px 10px;
+                                padding: 10px 15px;
 
                             }
                         }
@@ -205,13 +213,14 @@
                             color: @white;
                             background-color: @tariff-price-background;
                             margin-bottom: 0;
+                            text-align: center;
 
                             @media only screen and (max-width:1200px) {
                                 padding: 9px 17px;
                             }
 
                             @media only screen and (max-width:767px) {
-                                padding: 6px 10px;
+                                padding: 10px 15px;
 
                             }
                         }
@@ -374,6 +383,9 @@
         &--campaign {
             background-color: #4BC1C2;
         }
+        &--news{
+            background-color: @white;
+        }
 
         &__title {
             color: @white;
@@ -385,6 +397,9 @@
             @media only screen and (max-width:767px) {
                 font-size: 20px;
 
+            }
+            &--news{
+                color: @sales-news-title;
             }
         }
 
@@ -430,7 +445,6 @@
             width: 100%;
 
             &__item {
-                width: 48%;
                 border-radius: 15px;
                 background-color: @white;
                 padding: 28px 26px 13px;
@@ -486,7 +500,7 @@
                         margin-left: 17px;
 
                         @media only screen and (max-width:767px) {
-                            font-size: 10px;
+                            font-size: 12px;
 
                         }
                     }
@@ -499,7 +513,7 @@
                     color: #575859;
 
                     @media only screen and (max-width:767px) {
-                        font-size: 10px;
+                        font-size: 12px;
 
                     }
                 }
@@ -591,4 +605,14 @@
             display: block;
         }
     }
+}
+
+
+.tariff-red{
+    color:@menu-red ;
+    border-color: @menu-red;
+}
+.tariff-normal {
+    color: @grey ;
+    border-color: @grey;
 }

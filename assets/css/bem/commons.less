@@ -5,6 +5,7 @@
 @import "commons/popular";
 @import "commons/main";
 @import "commons/about";
+@import "commons/cabinet";
 @import "commons/mobile-menu";
 @import "commons/header-mobile";
 
@@ -39,31 +40,39 @@
   height: 100%;
 
 }
+
 .seem {
-    visibility: visible;
-    opacity: 1;
-    transform: translate(0, 0px) scale(1);
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0, 0px) scale(1);
 }
-.active{
+
+.active {
   display: block;
 }
-.disable{
+
+.disable {
   display: none;
 }
+
 .disable-after::after {
   display: none;
 }
-.slick-slide{
+
+.slick-slide {
   margin-right: 30px;
 }
-.rotate-180::before{
+
+.rotate-180::before {
   transform: rotate(180deg);
   transition: 0.2s;
 }
+
 .rotate-270::before {
   transform: rotate(270deg);
   transition: 0.2s;
 }
+
 .line {
   width: 35px;
   height: 2px;
@@ -130,6 +139,7 @@
     font-icon: url('../../icons/facebook-white.svg');
   }
 }
+
 .arrow-icon {
   font-size: 8px;
   color: @white;
@@ -140,6 +150,7 @@
     font-icon: url('../../icons/arrow.svg');
   }
 }
+
 .lcwaikiki-icon {
   font-size: 40px;
   font-family: Inter-Medium;
@@ -151,4 +162,16 @@
     font-icon: url('../../icons/lcwaikiki.svg');
   }
 }
-
+.market-icon {
+  font-size: 30px;
+  font-family: Inter-Medium;
+  color: @menu-red;
+@media only screen and (max-width:767px) {
+    font-size: 22px;;
+  }
+  &:before {
+    content: '';
+    display: inline-block;
+    font-icon: url('../../icons/market.svg');
+  }
+}

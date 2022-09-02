@@ -10,6 +10,10 @@
         padding-top: 120px;
     }
 
+    @media only screen and (max-width:767px) {
+        overflow-y: scroll;
+    }
+
     &__brand-con {
         background-color: @waikiki-brand-con;
         border-top-left-radius: 16px;
@@ -118,10 +122,12 @@
 
         @media only screen and (max-width:993px) {
             margin-top: 50px;
+            padding-bottom: 160px
         }
 
         @media only screen and (max-width:767px) {
             margin-top: 50px;
+            padding-bottom: 130px
         }
 
         &__btn {
@@ -159,15 +165,15 @@
         color: @sales-text;
 
         @media only screen and (max-width:993px) {
+            position: static;
             left: 25px;
             font-size: 12px;
             bottom: 90px;
         }
 
         @media only screen and (max-width:767px) {
-            position: absolute;
+            position: static;
             font-size: 10px;
-            bottom: 40px;
 
         }
     }
@@ -178,16 +184,18 @@
         right: 120px;
 
         @media only screen and (max-width:993px) {
+            position: static;
+                float: right;
             right: 25px;
             width: 200px;
             height: 180px;
         }
 
         @media only screen and (max-width:767px) {
-            position: absolute;
+            width: 180px;
+                height: 160px;
+            position: static;
             float: right;
-            width: 140px;
-            height: 120px;
         }
 
         img {
