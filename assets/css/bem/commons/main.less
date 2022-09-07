@@ -121,7 +121,7 @@
         }
 
         &__paragraph {
-            font-size: 14px;
+            font-size: 15px;
             font-family: @Montserrat-regular;
             color: @sidebar-color;
             line-height: 19px;
@@ -143,23 +143,25 @@
                 color: @grey;
                 padding-bottom: 4px;
                 border-bottom: 1px solid @grey;
-                &:hover{
+
+                &:hover {
                     color: @menu-red;
                     border-color: @menu-red;
                 }
-                
+
                 @media only screen and (max-width:767px) {
                     font-size: 14px;
 
                 }
             }
+
             &__country:first-child+&__country {
-               margin-left: 10px;
+                margin-left: 10px;
             }
 
             &__container {
                 width: 100%;
-                margin-top: 20px;
+                margin-top: 40px;
 
                 &__list {
                     gap: 20px;
@@ -237,11 +239,12 @@
 
         @media only screen and (max-width:1200px) {
             padding-right: 30px;
-            padding-top: 40px;
+            padding-top: 80px;
         }
 
         @media only screen and (max-width:993px) {
             padding-left: 25px;
+            padding-top: 50px;
             padding-right: 25px;
 
         }
@@ -262,7 +265,7 @@
         &__container {
             display: flex;
             align-items: stretch;
-            justify-content: space-between;
+            gap: 40px;
             width: 100%;
 
             @media only screen and (max-width:767px) {
@@ -271,9 +274,16 @@
             }
 
             &__video {
-                width: 48%;
+                width: 30%;
+
+                @media only screen and (max-width:1400px) {
+
+                    width: 40%;
+
+                }
 
                 @media only screen and (max-width:767px) {
+
                     width: 100%;
 
                 }
@@ -301,7 +311,7 @@
             }
 
             &__right {
-                width: 48%;
+                width: 40%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -383,7 +393,8 @@
         &--campaign {
             background-color: #4BC1C2;
         }
-        &--news{
+
+        &--news {
             background-color: @white;
         }
 
@@ -398,7 +409,8 @@
                 font-size: 20px;
 
             }
-            &--news{
+
+            &--news {
                 color: @sales-news-title;
             }
         }
@@ -567,11 +579,13 @@
                 margin-bottom: 20px;
                 cursor: pointer;
                 font-family: @Montserrat-medium;
+
                 @media only screen and (max-width:767px) {
-                        font-size: 12px;
-                        margin-bottom: 12px;
-                
-                    }
+                    font-size: 12px;
+                    margin-bottom: 12px;
+
+                }
+
                 &__icon {
                     margin-right: 10px;
                 }
@@ -585,10 +599,10 @@
                 color: @accordion-title;
                 font-size: 13px;
                 font-family: @Montserrat-regular;
+
                 @media only screen and (max-width:767px) {
-                        font-size: 10px
-                
-                    }
+                    font-size: 10px
+                }
             }
 
         }
@@ -608,10 +622,11 @@
 }
 
 
-.tariff-red{
-    color:@menu-red ;
+.tariff-red {
+    color: @menu-red ;
     border-color: @menu-red;
 }
+
 .tariff-normal {
     color: @grey ;
     border-color: @grey;

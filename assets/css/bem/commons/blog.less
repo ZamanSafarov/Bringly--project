@@ -3,11 +3,11 @@
     background-color: @white;
     padding: 80px 98px 24px 320px;
     height: 100vh;
-        overflow-y: scroll;
+    overflow-y: scroll;
 
     @media only screen and (max-width:993px) {
         padding: 0 25px;
-        padding-top: 140px;
+        padding-top: 160px;
     }
 
     &__title {
@@ -18,24 +18,28 @@
 
     &__tabs {
         width: 100%;
-        .flexbox(center, space-between);
+        .flexbox(center, flex-start);
         margin-top: 33px;
+        gap: 30px;
 
         @media only screen and (max-width:767px) {
             justify-content: flex-start;
-            gap: 25px;
+            gap: 15px;
             flex-wrap: wrap;
         }
 
         &__btn {
             padding: 8px 30px;
             transition: 0.2s;
-            color: @official-site-color;
+            color: @white;
             font-size: 12px;
             font-family: @Montserrat-medium;
             border: none;
             border-radius: 5px;
+
+            border: 1px solid transparent;
             background-color: hsla(181, 49%, 53%, 7%);
+            color: @official-site-color;
 
             @media only screen and (max-width:1200px) {
                 padding: 7px 25px;
@@ -49,14 +53,20 @@
             border-radius: 5px;
             background-color: @official-site-color;
             color: @white;
+            border: 1px solid @official-site-color;
         }
     }
 
     &__cards {
         margin-top: 76px;
         width: 100%;
+        gap: 20px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        @media only screen and (max-width:1200px) {
+            grid-template-columns: 1fr 1fr;
+        }
 
         @media only screen and (max-width:993px) {
             display: flex;
@@ -68,6 +78,7 @@
         @media only screen and (max-width:767px) {
             display: block;
             margin-top: 50px;
+            padding-right: 70px;
         }
 
         &__container {
@@ -150,4 +161,16 @@
             border-bottom-right-radius: 5px;
         }
     }
+}
+
+.normal-tab {
+    border: 1px solid transparent;
+    background-color: hsla(181, 49%, 53%, 7%);
+    color: @official-site-color;
+}
+
+.clicked-tab {
+    background-color: @official-site-color;
+    color: @white;
+    border: 1px solid @official-site-color;
 }

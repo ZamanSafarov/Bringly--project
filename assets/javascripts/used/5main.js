@@ -32,6 +32,15 @@ $(document).ready(function () {
         $('.js--tr-other').addClass('tariff-red')
     })
     
+    $('.js--tabs').click((e) => {
+        if ($('.js--tabs').hasClass('clicked-tab')) {
+            $('.js--tabs').removeClass('clicked-tab')
+            $('.js--tabs').addClass('normal-tab')
+        }
+        
+        $(e.target).addClass('clicked-tab')
+    })
+
     $('.js--question').click((e) => {
         $(e.target).siblings('.js--answer').toggleClass('active')
         
