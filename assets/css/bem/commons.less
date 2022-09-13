@@ -1,11 +1,15 @@
 @import "commons/sidebar";
 @import "commons/header";
+@import "commons/custom-select";
 @import "commons/lc-waikiki";
 @import "commons/blog";
 @import "commons/popular";
 @import "commons/main";
 @import "commons/about";
 @import "commons/cabinet";
+@import "commons/apply";
+@import "commons/parcels-select";
+@import "commons/parcels";
 @import "commons/mobile-menu";
 @import "commons/header-mobile";
 
@@ -73,6 +77,16 @@
   transition: 0.2s;
 }
 
+.parcels-button {
+  background-color: @accordion-arrow;
+
+  &:hover {
+    border: 1px solid @accordion-arrow;
+    background-color: @white;
+    color: @accordion-arrow;
+  }
+}
+
 .line {
   width: 35px;
   height: 2px;
@@ -101,6 +115,29 @@
     content: '';
     display: inline-block;
     font-icon: url('../../icons/eye.svg');
+  }
+}
+
+.header-arrow-icon {
+  font-size: 5px;
+  color: @white;
+  font-family: Inter-Medium;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    font-icon: url('../../icons/header-arrow.svg');
+  }
+}
+
+.select-arrow-icon {
+  font-size: 16px;
+  font-family: Inter-Medium;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    font-icon: url('../../icons/select-arrow.svg');
   }
 }
 

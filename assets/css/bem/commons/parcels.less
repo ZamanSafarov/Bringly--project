@@ -1,0 +1,252 @@
+.parcels {
+    width: 100%;
+    background-color: @white;
+    height: 100vh;
+    overflow-y: scroll;
+
+    @media only screen and (max-width:993px) {
+        padding-top: 115px;
+    }
+
+    &__wrapper {
+        padding: 30px 180px 30px 320px;
+
+        @media only screen and (max-width:993px) {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+
+    &__about {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @media only screen and (max-width:767px) {
+            flex-direction: column;
+        }
+
+        &__left {
+            width: 48%;
+            padding: 25px;
+
+            height: 300px;
+            padding-right: 100px;
+
+            @media only screen and (max-width:1200px) {
+                padding-right: 25px;
+            }
+
+            @media only screen and (max-width:767px) {
+                width: 100%;
+            }
+
+            border: 2px dashed @header-border-color;
+            border-radius: 9px;
+
+            &__title {
+                font-family: @Montserrat-semiBold;
+                font-size: 17px;
+                line-height: 16px;
+                margin-bottom: 14px;
+                color: @accordion-arrow;
+            }
+        }
+
+        &__text {
+            font-family: @Montserrat-medium;
+            font-size: 13px;
+            line-height: 18px;
+            color: @sidebar-color;
+            margin-bottom: 22px;
+        }
+
+        &__text-grey {
+            font-family: @Montserrat-medium;
+            font-size: 13px;
+            line-height: 18px;
+            color: @parcels-text;
+            text-decoration: none;
+            margin-bottom: 17px;
+
+        }
+
+        &__right {
+            width: 48%;
+
+            @media only screen and (max-width:767px) {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin-top: 40px;
+            }
+        }
+
+        &__carousel-con {
+            width: 300px;
+
+            @media only screen and (max-width:767px) {
+                width: 400px;
+                margin-right: -30px;
+            }
+
+            @media only screen and (max-width:479px) {
+                width: 270px;
+
+            }
+        }
+
+        &__carousel-item {
+
+            height: 200px;
+
+            img {
+                border-radius: 8px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__filter {
+        width: 100%;
+        background: @parcels-filter-bg;
+        padding: 16px 18px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        @media only screen and (max-width:767px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 25px;
+        }
+
+        &__all {
+            font-family: @Montserrat-medium;
+            font-size: 12px;
+            line-height: 16px;
+            color: @cabinet-header;
+        }
+
+        &__month {
+            font-family: @Montserrat-medium;
+            font-size: 12px;
+            line-height: 16px;
+            color: @parcels-text;
+        }
+
+    }
+
+    &__status-text {
+        font-family: @Montserrat-regular;
+        font-size: 15px;
+        line-height: 18px;
+        color: @header-border-color;
+        margin: 35px 0;
+
+        position: relative;
+    }
+
+    &__status-text::before {
+        content: "";
+        background-image: url("../../../../wwwroot/static/parcel-img/ballon.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: absolute;
+        top: -20px;
+        left: 0;
+        height: 60px;
+        width: 50px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 0 -9px;
+        margin-top: 40px;
+        align-content: stretch;
+    }
+
+    &__item {
+        margin: 9px;
+        width: ~"calc(25% - 19px)";
+        background: @parcels-bg;
+        border-radius: 6px;
+
+        @media only screen and (max-width:1200px) {
+            width: ~"calc(33.33% - 19px)"
+        }
+
+        @media only screen and (max-width:767px) {
+            width: ~"calc(50% - 19px)"
+        }
+
+        @media only screen and (max-width:479px) {
+            width: ~"calc(100% - 19px)"
+        }
+
+        &__img {
+            width: 100%;
+            height: 209px;
+        }
+
+        &__title {
+            color: @white;
+            background: @cabinet-header;
+            font-family: @Montserrat-bold;
+            font-size: 12px;
+            line-height: 16px;
+            padding: 8px 16px;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+
+        }
+
+        &__info {
+            padding: 14px 17px;
+        }
+
+        &__seller {
+            list-style-type: none;
+            color: @parcels-text;
+            font-family: @Montserrat-regular;
+            font-size: 10px;
+            line-height: 16px;
+            margin-bottom: 10px;
+
+            &__name {
+                font-family: @Montserrat-bold;
+            }
+        }
+
+        &__link {
+            color: @white;
+            background: @cabinet-header;
+            font-family: @Montserrat-medium;
+            font-size: 10px;
+            border-radius: 2px;
+            line-height: 16px;
+            padding: 5px 10px;
+            border: 1px solid transparent;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                border: 1px solid @cabinet-header;
+                background-color: @white;
+                color: @cabinet-header;
+            }
+        }
+
+    }
+}
+
+.title-bg-grey {
+    background: @parcels-item-title-bg;
+}

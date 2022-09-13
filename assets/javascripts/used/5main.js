@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
-   
-    $('.js--play').click(()=>{
+
+    $('.js--play').click(() => {
         $('.js--start').addClass('disable')
         $('.js--video').addClass('active')
     })
@@ -31,22 +31,30 @@ $(document).ready(function () {
         }
         $('.js--tr-other').addClass('tariff-red')
     })
-    
+
     $('.js--tabs').click((e) => {
         if ($('.js--tabs').hasClass('clicked-tab')) {
             $('.js--tabs').removeClass('clicked-tab')
             $('.js--tabs').addClass('normal-tab')
         }
-        
+
         $(e.target).addClass('clicked-tab')
     })
 
+
+
+
+
+
+
+
+
     $('.js--question').click((e) => {
         $(e.target).siblings('.js--answer').toggleClass('active')
-        
+
         $(e.target).children('.js--arrow').toggleClass('rotate-270')
         $(e.target).closest('.js--accordion--con').toggleClass('disable-after')
-        
+
     })
     $('.js--carousel').slick({
         infinite: true,
@@ -70,10 +78,10 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 2,
         slidesToScroll: 1,
-        arrows:true,
+        arrows: true,
         prevArrow: $('.prev-campaign'),
         nextArrow: $('.next-campaign'),
-         responsive: [
+        responsive: [
             {
                 breakpoint: 767,
                 settings: {
@@ -82,7 +90,18 @@ $(document).ready(function () {
                 }
             }
         ]
-        
+
+    });
+
+    $('.js--parcels-carousel').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        speed: 1000,
+
     });
     $('.js--carousel-sales').slick({
         infinite: true,
@@ -116,7 +135,7 @@ $(document).ready(function () {
         ]
 
     });
-    
+
 
 
     var McButton = $("[data=hamburger-menu]");
@@ -128,7 +147,7 @@ $(document).ready(function () {
 
     McButton.click(function () {
         $(this).toggleClass("active");
-        
+
         $('b:nth-child(2)').toggleClass('disable')
         if (McButton.hasClass("active")) {
             McBar1.velocity({ top: "50%" }, { duration: 100, easing: "swing" });
@@ -141,6 +160,38 @@ $(document).ready(function () {
                 .velocity({ top: "80%" }, { duration: 100, easing: "swing" });
             McBar1.velocity("reverse", { delay: 600 });
         }
+    });
+
+    //file-upload
+    const actualBtn = document.querySelector('.js--actual-btn');
+    const actualBtn_sec = document.querySelector('.js--actual-btn-sec');
+
+    const fileChosen = document.querySelector('.js--file-name');
+    const fileChosen_sec = document.querySelector('.js--file-name-sec');
+
+    if (actualBtn) {
+
+        actualBtn.addEventListener('change', function () {
+            fileChosen.textContent = actualBtn.files[0].name
+        })
+
+        actualBtn_sec.addEventListener('change', function () {
+            fileChosen_sec.textContent = actualBtn_sec.files[0].name
+
+        });
+    }
+    // onClick new options list of new select
+    var newOptions = $('.js--menu-item');
+    newOptions.click(function () {
+        $('.js--ae-select-content').text($(this).text());
+        $('.js--menu-item').removeClass('selected');
+        $(this).addClass('selected');
+    });
+
+    var aeDropdown = $('.js--dropdown');
+    aeDropdown.click(function () {
+        $('.js--dropdown-menu').toggleClass('ae-hide');
+        $('.dropdown-wrapper').toggleClass('border-wrapper');
     });
 
 

@@ -56,6 +56,8 @@
             align-items: center;
             gap: 20px;
 
+
+
             &__link {
                 text-decoration: none;
                 font-size: 12px;
@@ -65,7 +67,7 @@
                 color: @white;
                 border: 1px solid transparent;
                 transition: .3s ease-in-out;
-
+                background-color: @menu-red;
 
                 @media only screen and (max-width:767px) {
                     padding: 5px 20px;
@@ -77,15 +79,15 @@
                     font-size: 9px;
                 }
 
-                &:first-child {
-                    background-color: @menu-red;
 
-                    &:hover {
-                        border: 1px solid @menu-red;
-                        background-color: @white;
-                        color: @menu-red;
-                    }
+
+
+                &:hover {
+                    border: 1px solid @menu-red;
+                    background-color: @white;
+                    color: @menu-red;
                 }
+
             }
 
             &__link:first-child+&__link {
