@@ -3,7 +3,6 @@
     background-color: @white;
     padding: 90px 115px 0px 320px;
     height: 100vh;
-    overflow-y: scroll;
 
 
     @media only screen and (max-width:993px) {
@@ -134,6 +133,26 @@
                 }
 
                 margin-left: 30px;
+            }
+        }
+        &__submit{
+            margin: 30px 0;
+            &__inp{
+                border: none;
+                background: @official-site-color;
+                padding: 7px 13px;
+                color: @white;
+                border-radius: 4px;
+                font-family: @Montserrat-medium;
+                font-size: 15px;
+                border: 1px solid transparent;
+                transition: 0.2s ease-in;
+                &:hover{
+                    border: 1px solid @official-site-color;
+                    color: @official-site-color;
+                    background: @white;
+                }
+
             }
         }
     }

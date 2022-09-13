@@ -36,7 +36,18 @@
 .wrapper {
   display: flex;
   position: relative;
-  overflow: hidden;
+}
+
+.disable-mob {
+  @media only screen and (max-width:767px) {
+    display: none;
+  }
+}
+
+.disable-desk {
+  @media only screen and (min-width:767px) {
+    display: none;
+  }
 }
 
 .main {
