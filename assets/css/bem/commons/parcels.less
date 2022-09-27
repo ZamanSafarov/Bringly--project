@@ -6,6 +6,9 @@
     @media only screen and (max-width:993px) {
         padding-top: 115px;
     }
+        @media only screen and (max-width:767px) {
+            overflow-x: hidden;
+        }
 
     &__wrapper {
         padding: 30px 180px 30px 320px;
@@ -43,7 +46,7 @@
                 border-width: 1px;
             }
 
-            border: 2px dashed @header-border-color;
+            border: 2px dashed @header-border-color-op;
             border-radius: 9px;
 
             &__title {
@@ -262,6 +265,9 @@
 
 .title-bg-grey {
     background: @parcels-item-title-bg;
+}
+.title-bg-purple {
+    background: @sidebar-color;
 }
 
 .user-red {

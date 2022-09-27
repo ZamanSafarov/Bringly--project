@@ -1,0 +1,171 @@
+.title {
+    display: flex;
+    align-self: center;
+    gap: 50px;
+    margin: 10px 0;
+
+    @media only screen and (max-width:479px) {
+        gap: 20px;
+    }
+
+    &__text {
+        font-family: @Montserrat-bold;
+        font-size: 22px;
+        line-height: 26px;
+        color: @parcels-status-title;
+
+        @media only screen and (max-width:767px) {
+            font-size: 20px;
+        }
+
+        @media only screen and (max-width:479px) {
+            font-size: 17px;
+        }
+    }
+}
+
+.status {
+    font-family: @Montserrat-medium;
+    font-size: 13px;
+    line-height: 26px;
+    color: @menu-red;
+
+    @media only screen and (max-width:767px) {
+        font-size: 11px;
+    }
+}
+
+.parcel-info {
+    margin-top: 32px;
+    padding: 40px;
+    background-color: @parcels-bg;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width:767px) {
+        padding: 10px;
+    }
+
+    @media only screen and (max-width:479px) {
+        padding: 30px;
+        flex-direction: column;
+    }
+}
+
+.parcel-item {
+    width: ~"calc(33.33% - 80px)";
+
+    @media only screen and (max-width:1200px) {
+        width: ~"calc(33.33% - 30px)";
+    }
+
+    @media only screen and (max-width:479px) {
+        width: 100%;
+    }
+
+    &__column-link {
+        margin-bottom: 55px;
+
+        @media only screen and (max-width:479px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media only screen and (max-width:479px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__column {
+        margin-bottom: 21px;
+
+        &__name {
+            font-family: @Montserrat-regular;
+            font-size: 14px;
+            line-height: 26px;
+            color: @parcels-text;
+
+            @media only screen and (max-width:767px) {
+                font-size: 11px;
+            }
+
+            @media only screen and (max-width:479px) {
+                font-size: 13px;
+            }
+        }
+
+        &__info {
+            font-family: @Montserrat-bold;
+            font-size: 16px;
+            line-height: 26px;
+            color: @official-site-color;
+
+            @media only screen and (max-width:767px) {
+                font-size: 13px;
+            }
+
+            @media only screen and (max-width:479px) {
+                font-size: 15px;
+            }
+        }
+
+        &__edit {
+            border: none;
+            background: @parcels-text;
+            padding: 6px 10px;
+            color: @white;
+            font-family: @Montserrat-medium;
+            font-size: 15px;
+            border: 1px solid transparent;
+            transition: 0.2s ease-in;
+
+            @media only screen and (max-width:767px) {
+                font-size: 12px;
+                padding: 6px;
+            }
+
+            @media only screen and (max-width:479px) {
+                font-size: 14px;
+                width: 80%;
+                text-align: center;
+            }
+
+            &:hover {
+                border: 1px solid @parcels-text;
+                color: @parcels-text;
+                background: @white;
+            }
+        }
+
+        &__pay {
+            border: none;
+            background: @menu-red;
+            padding: 6px 30px;
+            color: @white;
+            border-radius: 4px;
+            font-family: @Montserrat-medium;
+            font-size: 15px;
+            border: 1px solid transparent;
+            transition: 0.2s ease-in;
+
+            @media only screen and (max-width:767px) {
+                font-size: 12px;
+                padding: 6px 22px;
+            }
+
+            @media only screen and (max-width:479px) {
+                font-size: 14px;
+                width: 80%;
+                text-align: center;
+            }
+
+            &:hover {
+                border: 1px solid @menu-red;
+                color: @menu-red;
+                background: @white;
+            }
+        }
+    }
+}

@@ -194,6 +194,14 @@ $(document).ready(function () {
         $('.dropdown-wrapper').toggleClass('border-wrapper');
     });
 
+    $('.js--link-more').click(() => {
+        $('.js--parcels-start').addClass('disable')
+        if ($('.js--parcels-more').hasClass('disable')) {
+            $('.js--parcels-more').removeClass('disable')
+            $('.js--parcels-more').addClass('active')
+        }
+    })
+
 
 
 
