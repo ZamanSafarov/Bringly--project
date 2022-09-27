@@ -86,7 +86,7 @@
             font-size: 14px;
             line-height: 26px;
             color: @parcels-text;
-
+            word-wrap: break-word;
             @media only screen and (max-width:767px) {
                 font-size: 11px;
             }
@@ -101,7 +101,7 @@
             font-size: 16px;
             line-height: 26px;
             color: @official-site-color;
-
+            word-wrap: break-word;
             @media only screen and (max-width:767px) {
                 font-size: 13px;
             }
@@ -168,4 +168,43 @@
             }
         }
     }
+}
+.parcel-delete{
+    width: 20%;
+    display: flex;
+    align-items: flex-end;
+    @media only screen and (max-width:479px) {
+        width: 100%;
+    }
+    &__button{
+        border: none;
+            padding: 6px 30px;
+            border-radius: 3px;
+            font-family: @Montserrat-medium;
+            font-size: 15px;
+            border: 1px solid transparent;
+            transition: 0.2s ease-in;
+            background-color: @sidebar-color;
+            color: @white;
+            @media only screen and (max-width:767px) {
+                font-size: 12px;
+                padding: 6px 22px;
+            }
+
+            @media only screen and (max-width:479px) {
+                font-size: 14px;
+                text-align: center;
+            }
+
+            &:hover {
+                border: 1px solid @sidebar-color;
+                color: @sidebar-color;
+                background: @white;
+            }
+        
+    }
+}
+    
+.margin-order-pay{
+    margin-bottom: 8px;
 }
